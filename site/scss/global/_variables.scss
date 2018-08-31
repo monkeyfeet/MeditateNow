@@ -1,0 +1,58 @@
+
+/**
+ * Colours
+ **/
+
+/**
+ * Map names to colours
+ * @type {[type]}
+ */
+$colours: (
+	black: #000000,
+	white: #FFFFFF,
+	grey: #BBBBBB,
+	light_grey: #EEEEEE,
+	blue: #06b8e4,
+	orange: #ffa619,
+	green: #69bd45,
+	yellow: #ffd02c,
+	red: #fb4540
+);
+
+// Loop each member of $map as key ($class) and val ($colour)
+@each $class, $colour in $colours {
+	
+	// appy color attr to -text classes
+	&.#{$class}-text {
+		color: $colour !important;
+	}
+
+	// appy background-color attr to -bg classes
+	&.#{$class}-bg {
+		background-color: $colour !important;
+
+		&.semi-trans {
+			background-color: rgba($colour, 0.95) !important;
+		}
+
+	    .darken {
+			background-color: darken($colour, 5%) !important;
+	    }
+		
+	}
+
+}
+
+/**
+ * Retrieve colour from $colours map
+ * @param  {string} $key [name of colour, as defined in $colours map]
+ * @return hex colour
+ */
+@function colour($key) {
+	@if map-has-key($colours, $key) {
+		@return map-get($colours, $key);
+	}
+
+	@warn "Unknown `#{$key}` in $colours.";
+	@return null;
+}
