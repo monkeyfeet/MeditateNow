@@ -28,5 +28,8 @@ class PageController extends ContentController {
 		} else {
 			Requirements::css('site/production/index.css');
 		}
+
+		//Requirements::css('//fonts.googleapis.com/css?family=Cousine:400,400i,700,700i');
+		Requirements::css('//fonts.googleapis.com/css?family=Rokkitt:400,700,900');
 	}
 }

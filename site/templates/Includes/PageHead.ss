@@ -3,7 +3,7 @@
 		<a href="{$BaseURL}">
 			<img src="/site/images/logo.png" alt="{$SiteConfig.Title} logo" />
 		</a>
-		<h1>$Title</h1>
+		<h1>Meditate Now</h1>
 		<% include MainNav %>
 	</div>
 </header>

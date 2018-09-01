@@ -2047,8 +2047,11 @@ footer.page-footer {
  **/
 body,
 html {
-  font-family: 'Open Sans', serif;
-  font-size: 14px; }
+  /*font-family: 'Open Sans', serif;
+	font-family: 'Cousine', monospace;*/
+  font-family: 'Rokkitt', serif;
+  font-size: 14px;
+  color: #1E1E1E; }
 
 /**
  * Headings
